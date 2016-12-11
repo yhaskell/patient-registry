@@ -1,0 +1,18 @@
+<div class="screen-center">
+
+  <md-card style="width: 50%; min-width: 500px; position: relative;">
+    <md-card-title>
+      Вход в систему
+    </md-card-title>
+    <md-card-content>
+      <form (submit)="onSubmit()">
+        <div style="width: 100%"><md-input name="email" style="width: 100%;" [(ngModel)]="email" placeholder="Электропочта" [disabled]="processing" ></md-input></div>
+        <div style="width: 100%"><md-input name="password" style="width: 100%;" type="password" [(ngModel)]="password" placeholder="Пароль" [disabled]="processing" ></md-input></div>
+        <button md-fab style="position: absolute; right: 0; bottom: 0; transform: translate(50%, 50%)" [disabled]="processing" (click)="onSubmit()">
+          <md-icon class="md-24" style="color: white">check</md-icon>
+        </button>
+      </form>
+    </md-card-content>
+    <div style="text-align: center;"><small>Не зарегистрированы? <a [class.disabled]="processing"  href="mailto:admin@non-existent-domain.org">обратитесь к администратору</a></small></div>
+  </md-card>
+</div>
