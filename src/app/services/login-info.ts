@@ -24,7 +24,7 @@ export class LoginInfoService {
 
 
   test(email, password) {
-    return true;
-    // return email == "test@test.com" && password == "123";
+    // return true;
+    return email == "test@test.com" && password == "123";
   }
 }
